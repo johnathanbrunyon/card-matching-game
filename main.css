@@ -16,5 +16,7 @@ img {
 .obj {
     border: red solid 2px;
     margin: 10px 2px;
+    width: 150px;
+    height: 200px;
 }
 
