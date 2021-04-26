@@ -1,0 +1,20 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    width: 150px;
+    height: 200px;
+    cursor: pointer;
+}
+
+.row {
+    display: inline-block;
+}
+
+.obj {
+    border: red solid 2px;
+    margin: 10px 2px;
+}
+
