@@ -1,5 +1,6 @@
 var flippedTotal = 0;
 var started = false;
+var childNdx;
 var flippedVals =
     [
         false,
@@ -13,6 +14,21 @@ var flippedVals =
         false
     ]
 
+var matched =
+    [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+    ]
+
+
+
 const imgSrcs =
     [
         "https://images.unsplash.com/photo-1556103255-4443dbae8e5a?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cGhvdG9ncmFwaGVyfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80",
@@ -24,6 +40,16 @@ const imgSrcs =
 
 function getRandomInteger(max) {
     return Math.floor(Math.random() * max);
+}
+
+function isMatching(card1, card2, child1, child2) {
+    var x = document.getElementsByTagName("img").item(child1);
+    var y = document.getElementsByTagName("img").item(child2);
+
+    if(card1.getAttribute("src") == card2.getAttribute("src"))
+    {
+
+    }
 }
 
 function Shuffle(array) {
@@ -47,10 +73,12 @@ function Shuffle(array) {
 function FlipCard(child) {
     if(started)
     {
+        childNdx += [child]
         if(flippedTotal > 1)
         {
             HideAllCards();
             flippedTotal = 0;
+            childNdx = [];
         }
         let item = document.getElementsByTagName("img").item(child);
         if(item.getAttribute("src") == "img/cardBack.jpg")
